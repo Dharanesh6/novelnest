@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload Ebook</title>
+    <link rel="stylesheet" href="style.css"> <!-- Link to the CSS file -->
+    <style>
+        /* Add a gap between the ebook file upload and cover image upload */
+        input[type="file"] {
+            margin-bottom: 20px; /* Adding space below each file input */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Upload an Ebook</h1>
+        <form action="upload.php" method="POST" enctype="multipart/form-data">
+            <label for="title">Title:</label>
+            <input type="text" name="title" id="title" required>
+            
+            <label for="author">Author:</label>
+            <input type="text" name="author" id="author" required>
+            
+            <label for="description">Description:</label>
+            <textarea name="description" id="description" required></textarea>
+            
+            <label for="file">Ebook File:</label>
+            <input type="file" name="file" id="file" accept=".pdf, .epub" required>
+            
+            <label for="cover_image">Cover Image (Optional):</label>
+            <input type="file" name="cover_image" id="cover_image" accept="image/*">
+            
+            <input type="submit" value="Upload Ebook">
+        </form>
+
+        <!-- Link to go back to home page -->
+        <p><a href="index.php">Back to Home</a></p>
+    </div>
+</body>
+</html>
